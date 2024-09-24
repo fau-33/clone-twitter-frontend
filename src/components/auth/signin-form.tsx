@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Input } from "../ui/input";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "../ui/button";
 
 export const SigninForm = () => {
   const router = useRouter();
@@ -31,10 +31,11 @@ export const SigninForm = () => {
         onChange={t => setPasswordField(t)}
         password
       />
-
-      
-      {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-        <button onClick={handleEnterButton}>Entrar</button>
+        <Button
+          label="Entrar"
+          onClick={handleEnterButton}
+          size={1}
+         />
     </>
   );
 }
